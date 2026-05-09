@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartik | Developer & Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,6 +15,7 @@
         <div class="nav-container">
             <a href="#" class="logo">K.</a>
             <ul class="nav-menu">
+                <li><a href="#profile">Profile</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#stats">Stats</a></li>
@@ -20,81 +24,96 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section with Profile Image -->
+    <section id="profile" class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hey, I'm <span class="highlight">Kartik</span></h1>
-                <p class="tagline">Developer • Designer • Problem Solver</p>
-                <p class="description">Building elegant solutions to complex problems. Currently crafting digital experiences.</p>
+                <p class="tagline">Full Stack Developer • Designer • Problem Solver</p>
+                <p class="description">Crafting elegant digital solutions and creating beautiful web experiences that make an impact.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>
             <div class="hero-visual">
+                <div class="profile-image-hero">
+                    <img src="https://via.placeholder.com/350" alt="Kartik Profile Picture">
+                    <div class="image-border-animation"></div>
+                </div>
                 <div class="geometric-shape shape-1"></div>
                 <div class="geometric-shape shape-2"></div>
-                <div class="geometric-shape shape-3"></div>
             </div>
         </div>
     </section>
 
-    <!-- Profile Image Section -->
-    <section class="profile-section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="profile-content">
-                <div class="profile-image-wrapper">
-                    <div class="profile-image">
-                        <img src="https://via.placeholder.com/300" alt="Kartik Profile Picture">
-                    </div>
-                </div>
-                <div class="profile-info">
-                    <h3>Kartik</h3>
-                    <p class="role">Full Stack Developer & Designer</p>
-                    <p class="bio">I'm a passionate developer with a keen eye for design. I love creating web applications that are not just functional but also delightful to use.</p>
-                    <p class="bio">My journey in tech started with curiosity and evolved into a passion for building innovative solutions. When I'm not coding, you'll find me exploring new technologies or working on exciting side projects.</p>
-                    <div class="skills">
-                        <div class="skill-item">
-                            <h4>Frontend</h4>
-                            <p>HTML, CSS, JavaScript, React</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Backend</h4>
-                            <p>Node.js, Python, Database Design</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Tools</h4>
-                            <p>Git, VS Code, Figma, GitHub</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- About Section - Full Width -->
+    <section id="about" class="about-full">
+        <div class="container-full">
+            <div class="about-header">
+                <h2>About Me</h2>
+                <p class="about-intro">Let me tell you my story and what drives my passion for technology</p>
             </div>
-        </div>
-    </section>
+            
+            <div class="about-grid">
+                <div class="about-main">
+                    <div class="about-card">
+                        <h3>Who I Am</h3>
+                        <p>I'm a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. With over 5 years of experience, I've worked on diverse projects ranging from small startups to enterprise-level applications.</p>
+                        <p>My journey in tech started with curiosity and a desire to build things. What began as a hobby has evolved into a professional career where I continuously push the boundaries of what's possible on the web.</p>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Why Work With Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I bring a unique combination of technical expertise and creative thinking to every project. With a strong foundation in both frontend and backend technologies, I create seamless user experiences backed by robust code.</p>
-                    <p>I'm committed to continuous learning and staying updated with the latest industry trends. My approach is collaborative, and I believe in clear communication and delivering results that exceed expectations.</p>
+                    <div class="about-card">
+                        <h3>What I Do</h3>
+                        <p>I specialize in creating responsive, user-centric web applications that solve real-world problems. Whether it's building scalable backends, crafting intuitive frontends, or designing seamless user experiences, I approach every project with meticulous attention to detail.</p>
+                        <p>I believe great software comes from understanding the problem deeply and iterating based on user feedback. I'm also passionate about clean code, best practices, and mentoring junior developers.</p>
+                    </div>
                 </div>
-                <div class="about-highlight">
-                    <div class="highlight-box">
-                        <span class="number">5+</span>
-                        <p>Years of Experience</p>
+
+                <div class="about-sidebar">
+                    <div class="stats-box">
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>20+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>15+</h4>
+                            <p>Happy Clients</p>
+                        </div>
                     </div>
-                    <div class="highlight-box">
-                        <span class="number">20+</span>
-                        <p>Projects Completed</p>
+
+                    <div class="skills-section">
+                        <h4>Core Skills</h4>
+                        <div class="skills-list">
+                            <div class="skill-tag">React</div>
+                            <div class="skill-tag">Node.js</div>
+                            <div class="skill-tag">JavaScript</div>
+                            <div class="skill-tag">Python</div>
+                            <div class="skill-tag">MongoDB</div>
+                            <div class="skill-tag">PostgreSQL</div>
+                            <div class="skill-tag">AWS</div>
+                            <div class="skill-tag">Docker</div>
+                        </div>
                     </div>
-                    <div class="highlight-box">
-                        <span class="number">15+</span>
-                        <p>Happy Clients</p>
+
+                    <div class="skills-section">
+                        <h4>Specializations</h4>
+                        <div class="specialization">
+                            <h5>Frontend Development</h5>
+                            <p>HTML, CSS, JavaScript, React, Next.js, Tailwind CSS</p>
+                        </div>
+                        <div class="specialization">
+                            <h5>Backend Development</h5>
+                            <p>Node.js, Express, Python, Flask, Database Design</p>
+                        </div>
+                        <div class="specialization">
+                            <h5>Tools & Platforms</h5>
+                            <p>Git, VS Code, Figma, GitHub, Vercel, Heroku</p>
+                        </div>
                     </div>
                 </div>
             </div>
