@@ -242,11 +242,102 @@ body {
     padding: 0 2rem;
 }
 
-/* About Section */
-.about {
+/* Profile Section */
+.profile-section {
     padding: 8rem 2rem;
     background: linear-gradient(135deg, rgba(100, 200, 255, 0.05), transparent);
     border-top: 1px solid rgba(100, 200, 255, 0.1);
+}
+
+.profile-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #64c8ff, #00d4ff);
+    border-radius: 2px;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.profile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid rgba(100, 200, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(100, 200, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+.profile-image:hover {
+    border-color: rgba(100, 200, 255, 0.6);
+    box-shadow: 0 30px 80px rgba(100, 200, 255, 0.3);
+    transform: translateY(-10px);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #64c8ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.profile-info .role {
+    font-size: 1.2rem;
+    color: #64c8ff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.profile-info .bio {
+    color: #c0c0c0;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* About Section */
+.about {
+    padding: 8rem 2rem;
+    background: #000;
 }
 
 .about h2 {
@@ -281,10 +372,41 @@ body {
     line-height: 1.8;
 }
 
-.skills {
+.about-highlight {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
+}
+
+.highlight-box {
+    padding: 2rem;
+    background: rgba(100, 200, 255, 0.08);
+    border: 2px solid rgba(100, 200, 255, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.highlight-box:hover {
+    border-color: rgba(100, 200, 255, 0.5);
+    background: rgba(100, 200, 255, 0.12);
+    transform: translateY(-5px);
+}
+
+.highlight-box .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #64c8ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-box p {
+    color: #b0b0b0;
+    font-size: 1rem;
 }
 
 .skill-item {
@@ -301,10 +423,11 @@ body {
     transform: translateY(-5px);
 }
 
-.skill-item h3 {
+.skill-item h3,
+.skill-item h4 {
     color: #64c8ff;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .skill-item p {
@@ -440,6 +563,183 @@ body {
     width: 100%;
 }
 
+/* Stats Section */
+.stats-section {
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.03), rgba(0, 212, 255, 0.02));
+    border-top: 1px solid rgba(100, 200, 255, 0.1);
+}
+
+.stats-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.stats-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #64c8ff, #00d4ff);
+    border-radius: 2px;
+}
+
+.stats-wrapper {
+    margin-top: 3rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    padding: 2.5rem;
+    background: rgba(100, 200, 255, 0.06);
+    border: 1.5px solid rgba(100, 200, 255, 0.2);
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(100, 200, 255, 0.5);
+    background: rgba(100, 200, 255, 0.1);
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(100, 200, 255, 0.15);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.github-icon {
+    background: rgba(100, 200, 255, 0.2);
+    color: #64c8ff;
+}
+
+.leetcode-icon {
+    background: rgba(255, 200, 0, 0.2);
+    color: #ffc800;
+}
+
+.codewars-icon {
+    background: rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
+}
+
+.stackoverflow-icon {
+    background: rgba(244, 128, 36, 0.2);
+    color: #f48024;
+}
+
+.devto-icon {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.contributions-icon {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+}
+
+.stat-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #64c8ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-label {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-link {
+    display: inline-block;
+    color: #64c8ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    border-radius: 8px;
+}
+
+.stat-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #64c8ff;
+    transition: width 0.3s ease;
+}
+
+.stat-link:hover {
+    background: rgba(100, 200, 255, 0.1);
+    border-color: rgba(100, 200, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.stat-link:hover::after {
+    width: 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 8rem 2rem;
@@ -530,11 +830,25 @@ body {
         font-size: 1rem;
     }
 
+    .profile-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
 
-    .skills {
+    .about-highlight {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
         grid-template-columns: 1fr;
     }
 
@@ -545,5 +859,10 @@ body {
 
     .hero-visual {
         display: none;
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
     }
 }
