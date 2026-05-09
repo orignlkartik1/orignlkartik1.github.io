@@ -244,7 +244,7 @@ body {
 
 /* Profile Section */
 .profile-section {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     background: linear-gradient(135deg, rgba(100, 200, 255, 0.05), transparent);
     border-top: 1px solid rgba(100, 200, 255, 0.1);
 }
@@ -269,27 +269,28 @@ body {
 
 .profile-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 3rem;
+    align-items: flex-start;
     margin-top: 3rem;
 }
 
 .profile-image-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     position: relative;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     border: 3px solid rgba(100, 200, 255, 0.3);
     box-shadow: 0 20px 60px rgba(100, 200, 255, 0.2);
     transition: all 0.4s ease;
+    flex-shrink: 0;
 }
 
 .profile-image:hover {
@@ -305,8 +306,8 @@ body {
 }
 
 .profile-info h3 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
     background: linear-gradient(135deg, #64c8ff, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -314,29 +315,29 @@ body {
 }
 
 .profile-info .role {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #64c8ff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .profile-info .bio {
     color: #c0c0c0;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
 }
 
 .profile-info .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* About Section */
 .about {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     background: #000;
 }
 
@@ -360,26 +361,26 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     margin-top: 3rem;
 }
 
 .about-text p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     color: #c0c0c0;
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 .about-highlight {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .highlight-box {
-    padding: 2rem;
+    padding: 1.8rem;
     background: rgba(100, 200, 255, 0.08);
     border: 2px solid rgba(100, 200, 255, 0.2);
     border-radius: 12px;
@@ -395,7 +396,7 @@ body {
 
 .highlight-box .number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, #64c8ff, #00d4ff);
     -webkit-background-clip: text;
@@ -406,14 +407,14 @@ body {
 
 .highlight-box p {
     color: #b0b0b0;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .skill-item {
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: rgba(100, 200, 255, 0.05);
     border: 1px solid rgba(100, 200, 255, 0.2);
-    border-radius: 12px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
@@ -426,19 +427,19 @@ body {
 .skill-item h3,
 .skill-item h4 {
     color: #64c8ff;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
 }
 
 .skill-item p {
     color: #a0a0a0;
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 /* Projects Section */
 .projects {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     background: #000;
 }
 
@@ -565,7 +566,7 @@ body {
 
 /* Stats Section */
 .stats-section {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     background: linear-gradient(135deg, rgba(100, 200, 255, 0.03), rgba(0, 212, 255, 0.02));
     border-top: 1px solid rgba(100, 200, 255, 0.1);
 }
@@ -594,12 +595,12 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
 .stat-card {
-    padding: 2.5rem;
+    padding: 2rem;
     background: rgba(100, 200, 255, 0.06);
     border: 1.5px solid rgba(100, 200, 255, 0.2);
     border-radius: 16px;
@@ -633,14 +634,14 @@ body {
 }
 
 .stat-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
     position: relative;
@@ -670,7 +671,7 @@ body {
 .devto-icon {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .contributions-icon {
@@ -679,29 +680,29 @@ body {
 }
 
 .stat-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     position: relative;
     z-index: 1;
 }
 
 .stat-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, #64c8ff, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     position: relative;
     z-index: 1;
 }
 
 .stat-label {
     color: #a0a0a0;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
     position: relative;
     z-index: 1;
 }
@@ -717,6 +718,7 @@ body {
     padding: 0.5rem 1rem;
     border: 1px solid rgba(100, 200, 255, 0.3);
     border-radius: 8px;
+    font-size: 0.9rem;
 }
 
 .stat-link::after {
@@ -742,7 +744,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(100, 200, 255, 0.05));
     border-top: 1px solid rgba(100, 200, 255, 0.1);
     text-align: center;
@@ -832,16 +834,21 @@ body {
 
     .profile-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .profile-image-wrapper {
+        justify-content: flex-start;
     }
 
     .profile-image {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .about-highlight {
@@ -862,7 +869,28 @@ body {
     }
 
     .stat-icon {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .profile-info .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+        font-size: 0.8rem;
     }
 }
