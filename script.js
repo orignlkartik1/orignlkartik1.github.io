@@ -78,3 +78,38 @@ cards.forEach((card, index) => {
 });
 
 console.log('Portfolio initialized successfully!');
+
+// Typewriter Effect
+const textArray = ["Software Engineer", "Algorithmic Problem Solver", "Backend Developer"];
+let textIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const erasingSpeed = 50;
+const newTextDelay = 2000; // Delay between current and next text
+const typewriterElement = document.getElementById("typewriter");
+
+function type() {
+    if (charIndex < textArray[textIndex].length) {
+        typewriterElement.textContent += textArray[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(erase, newTextDelay);
+    }
+}
+
+function erase() {
+    if (charIndex > 0) {
+        typewriterElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+    } else {
+        textIndex++;
+        if (textIndex >= textArray.length) textIndex = 0;
+        setTimeout(type, typingSpeed + 1100);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
