@@ -1,5 +1,6 @@
 # orignlkartik1.github.io
-Portfolio Website.
 
-Not completed right now.
-searching for any devloper.
+It is portfolio website.
+created using github copilot and gemini.
+
+## It is my first vibe-coded repo.
