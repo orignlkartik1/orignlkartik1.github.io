@@ -1,38 +1,30 @@
-// Smooth scroll behavior for navigation links
+// 1. Smooth scroll behavior for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
+// 2. Intersection Observer for fade-in animations
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
             observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 // Observe all sections and cards
-document.querySelectorAll('section, .project-card, .skill-item').forEach(el => {
+document.querySelectorAll('section, .project-card, .stat-card, .about-card').forEach(el => {
     observer.observe(el);
 });
 
-// Update active nav link based on scroll position
+// 3. Update active nav link based on scroll position 
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -47,95 +39,20 @@ window.addEventListener('scroll', () => {
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
-            link.style.color = '#64c8ff';
+            link.style.color = '#00ff41'; // Matrix Green
         } else {
-            link.style.color = '#e0e0e0';
+            link.style.color = '#6b8f71'; // Muted Green
         }
     });
 });
 
-// Mouse tracking effect for geometric shapes (optional)
-const shapes = document.querySelectorAll('.geometric-shape');
-let mouseX = 0;
-let mouseY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX / window.innerWidth;
-    mouseY = e.clientY / window.innerHeight;
-    
-    shapes.forEach((shape, index) => {
-        const speed = (index + 1) * 10;
-        const x = mouseX * speed;
-        const y = mouseY * speed;
-        shape.style.transform = `translate(${x}px, ${y}px)`;
-    });
-});
-
-// Add stagger animation to cards
-const cards = document.querySelectorAll('.project-card, .skill-item');
+// 4. Add stagger animation to cards
+const cards = document.querySelectorAll('.project-card, .stat-card, .about-card');
 cards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 });
 
-console.log('Portfolio initialized successfully!');
-
-// Typewriter Effect
-const textArray = ["Software Engineer", "Algorithmic Problem Solver", "Backend Developer"];
-let textIndex = 0;
-let charIndex = 0;
-const typingSpeed = 100;
-const erasingSpeed = 50;
-const newTextDelay = 2000; // Delay between current and next text
-const typewriterElement = document.getElementById("typewriter");
-
-function type() {
-    if (charIndex < textArray[textIndex].length) {
-        typewriterElement.textContent += textArray[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingSpeed);
-    } else {
-        setTimeout(erase, newTextDelay);
-    }
-}
-
-function erase() {
-    if (charIndex > 0) {
-        typewriterElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, erasingSpeed);
-    } else {
-        textIndex++;
-        if (textIndex >= textArray.length) textIndex = 0;
-        setTimeout(type, typingSpeed + 1100);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
-
-// Smooth scroll behavior
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-});
-
-// Intersection Observer for fade-in animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('section, .project-card, .stat-card').forEach(el => observer.observe(el));
-
-// Typewriter Effect
+// 5. Typewriter Effect
 const textArray = ["Software_Engineer", "Algorithm_Specialist", "Backend_Dev"];
 let textIndex = 0, charIndex = 0;
 const typewriterElement = document.getElementById("typewriter");
@@ -162,77 +79,46 @@ function erase() {
 }
 document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
 
-// --- NEW: Node Graph Background Animation ---
-const canvas = document.getElementById('node-bg');
+// 6. Matrix Digital Rain Background (Confined to Hero Section)
+const canvas = document.getElementById('matrix-bg');
 if (canvas) {
     const ctx = canvas.getContext('2d');
-    let width, height, particles;
+    let width, height;
 
-    function initCanvas() {
+    const characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレゲゼデベペオォコソトノホモヨョロゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const fontSize = 14;
+    let columns, drops;
+
+    function initMatrix() {
+        // Scopes the canvas size exactly to its parent container (.hero-visual)
         width = canvas.width = canvas.parentElement.offsetWidth;
         height = canvas.height = canvas.parentElement.offsetHeight;
-        particles = [];
-        for (let i = 0; i < 40; i++) {
-            particles.push({
-                x: Math.random() * width,
-                y: Math.random() * height,
-                vx: (Math.random() - 0.5) * 1,
-                vy: (Math.random() - 0.5) * 1
-            });
+        columns = Math.floor(width / fontSize);
+        drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
         }
     }
 
-    let mouse = { x: null, y: null };
-    canvas.addEventListener('mousemove', e => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
-    });
-    canvas.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(3, 10, 3, 0.1)'; 
+        ctx.fillRect(0, 0, width, height);
 
-    function animateNodes() {
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = '#00f0ff';
-        ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)';
+        ctx.fillStyle = '#00ff41'; 
+        ctx.font = fontSize + 'px "JetBrains Mono", monospace';
 
-        particles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < 0 || p.x > width) p.vx *= -1;
-            if (p.y < 0 || p.y > height) p.vy *= -1;
+        for (let i = 0; i < drops.length; i++) {
+            const text = characters.charAt(Math.floor(Math.random() * characters.length));
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-            ctx.fill();
-
-            // Connect nearby nodes
-            particles.forEach(p2 => {
-                const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                if (dist < 80) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.stroke();
-                }
-            });
-
-            // Connect to mouse
-            if (mouse.x) {
-                const mouseDist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-                if (mouseDist < 120) {
-                    ctx.strokeStyle = `rgba(0, 240, 255, ${1 - mouseDist/120})`;
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(mouse.x, mouse.y);
-                    ctx.stroke();
-                    ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)'; // Reset
-                }
+            if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                drops[i] = 0;
             }
-        });
-        requestAnimationFrame(animateNodes);
+            drops[i]++;
+        }
     }
 
-    window.addEventListener('resize', initCanvas);
-    initCanvas();
-    animateNodes();
+    window.addEventListener('resize', initMatrix);
+    initMatrix();
+    setInterval(drawMatrix, 50); 
 }
