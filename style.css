@@ -5,20 +5,19 @@
 }
 
 :root {
-    --bg-dark: #050505;
-    --bg-panel: #0a0a0a;
-    --accent: #00f0ff;
-    --accent-hover: #00c3cc;
+    --bg-dark: #030a03; 
+    --bg-panel: #071207;
+    --accent: #00ff41; 
+    --accent-hover: #00cc33;
     --text-main: #e0e0e0;
-    --text-muted: #888888;
-    --grid-line: rgba(255, 255, 255, 0.05);
-    --border-hard: 1px solid #333;
+    --text-muted: #6b8f71; 
+    --grid-line: rgba(0, 255, 65, 0.05);
+    --border-hard: 1px solid #1a331a;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
-    /* Graph paper background representing matrix/linear spaces */
     background-image: 
         linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
@@ -39,7 +38,7 @@ h1, h2, h3, h4, .logo, .nav-menu a, .tagline {
     top: 0;
     width: 100%;
     padding: 1.5rem 0;
-    background: rgba(5, 5, 5, 0.9);
+    background: rgba(3, 10, 3, 0.95);
     border-bottom: var(--border-hard);
     z-index: 1000;
 }
@@ -166,12 +165,12 @@ h1, h2, h3, h4, .logo, .nav-menu a, .tagline {
     background: var(--accent);
     color: var(--bg-dark);
     border: 1px solid var(--accent);
-    box-shadow: 4px 4px 0px rgba(0, 240, 255, 0.3);
+    box-shadow: 4px 4px 0px rgba(0, 255, 65, 0.3);
 }
 
 .btn-primary:hover {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px rgba(0, 240, 255, 0.3);
+    box-shadow: 2px 2px 0px rgba(0, 255, 65, 0.3);
 }
 
 .btn-secondary {
@@ -185,7 +184,7 @@ h1, h2, h3, h4, .logo, .nav-menu a, .tagline {
     color: var(--accent);
 }
 
-/* Hero Visual & Graph Canvas */
+/* Hero Visual & Matrix Canvas */
 .hero-visual {
     position: relative;
     height: 400px;
@@ -194,15 +193,13 @@ h1, h2, h3, h4, .logo, .nav-menu a, .tagline {
     justify-content: center;
 }
 
-#node-bg {
+#matrix-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
-    pointer-events: none;
 }
 
 .profile-image-hero {
@@ -250,7 +247,7 @@ h2::before {
     color: var(--accent);
 }
 
-/* Cards (About, Projects, Stats) */
+/* Cards (About, Projects, Stats) - SOLID BACKGROUNDS */
 .about-grid, .projects-grid, .stats-grid {
     display: grid;
     gap: 2rem;
@@ -295,7 +292,7 @@ p { color: var(--text-muted); }
     padding: 0.3rem 0.8rem;
     background: transparent;
     color: var(--accent);
-    border: 1px solid #333;
+    border: 1px solid #1a331a;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     margin-bottom: 1rem;
@@ -322,6 +319,26 @@ p { color: var(--text-muted); }
 .stat-card:hover .stat-icon svg { fill: var(--accent); }
 .stat-number { font-size: 2.5rem; color: var(--text-main); margin-bottom: 0; }
 
+/* Contact Specifics */
+.contact { text-align: center; }
+.contact-subtitle { margin-bottom: 3rem; }
+.contact-methods { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.contact-link {
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+.contact-link:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+.footer { padding: 2rem; text-align: center; color: var(--text-muted); }
+
 /* Utilities */
 .cursor { animation: blink 1s infinite; color: var(--accent); }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
@@ -333,10 +350,10 @@ p { color: var(--text-muted); }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
-::-webkit-scrollbar-thumb { background: #333; }
+::-webkit-scrollbar-thumb { background: #1a331a; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 @media (max-width: 768px) {
     .hero-content, .about-grid { grid-template-columns: 1fr; }
-    #node-bg { display: none; } /* Save mobile performance */
+    #matrix-bg { display: none; } 
 }
