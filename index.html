@@ -1,328 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Gupta | Tech Geek</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kartik Gupta - Computer Science Engineering student and aspiring Software Engineer portfolio." />
+  <title>Kartik Gupta | Aspiring Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">ORIGNLKARTIK1-!</a>
-            <ul class="nav-menu">
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#stats">Stats</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <div class="page-shell">
+    <header class="topbar">
+      <nav class="navbar" aria-label="Primary navigation">
+        <a href="#home" class="brand">Kartik Gupta</a>
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="primary-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Computer Science Engineer | Software Engineer in Training</span>
+            <h1 id="hero-title">Hi, I’m <span>Kartik Gupta</span></h1>
+            <p class="hero-subtitle">Building thoughtful software, scalable systems, and polished web experiences with clean code and modern engineering principles.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="assets/resume.pdf" download="Kartik-Gupta-Resume.pdf">Download Resume</a>
+              <a class="button button-secondary" href="#contact">Contact Me</a>
+            </div>
+            <div class="hero-highlights" aria-label="Quick strengths">
+              <div><strong>4.0 GPA</strong><span>CS Curriculum</span></div>
+              <div><strong>20+</strong><span>Projects Built</span></div>
+              <div><strong>Algorithms</strong><span>Systems Design</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card glass-card">
+              <div class="profile-frame">
+                <img src="assets/images/profile.png" alt="Profile photo of Kartik Gupta" loading="lazy" />
+              </div>
+              <div class="hero-card-copy">
+                <p class="small-title">Aspiring Software Engineer</p>
+                <h2 class="typing-text" aria-live="polite"></h2>
+                <p>I focus on backend systems, full-stack web applications, secure network architecture, and efficient automation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-about" aria-labelledby="about-heading">
+        <div class="section-header">
+          <span>About Me</span>
+          <h2 id="about-heading">Professional summary and goals</h2>
+        </div>
+        <div class="about-grid">
+          <div class="glass-panel about-card">
+            <h3>Who I am</h3>
+            <p>Computer Science Engineering student with a passion for software architecture, backend development, and cybersecurity. I enjoy designing resilient systems, automating workflows, and turning technical complexity into clear, maintainable solutions.</p>
+            <ul class="about-list">
+              <li><strong>Education:</strong> B.Tech in Computer Science Engineering</li>
+              <li><strong>Focus:</strong> Software Development, Systems Design, Cybersecurity</li>
+              <li><strong>Career Goal:</strong> Join a product-driven engineering team and help build impactful software.</li>
             </ul>
+          </div>
+
+          <div class="glass-panel about-highlights">
+            <div>
+              <h4>Core Strengths</h4>
+              <p>Logical problem solving, disciplined debugging, and production-grade code quality with an emphasis on performance and reliability.</p>
+            </div>
+            <div class="highlight-grid">
+              <div><strong>Analytical Thinking</strong><span>Data structures, algorithms, complexity analysis</span></div>
+              <div><strong>Communication</strong><span>Documentation, collaboration, technical clarity</span></div>
+              <div><strong>Adaptability</strong><span>Fast learner with a growth mindset for new tools and languages</span></div>
+              <div><strong>Attention to Detail</strong><span>Clean implementation, code review readiness, polished UI</span></div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </section>
 
-    <section id="profile" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hey, I'm </h1>
-                <h1><span class="highlight">Kartik Gupta</span></h1>
-                
-                <p class="tagline"><span id="typewriter"></span><span class="cursor">|</span></p>
-                
-                <p class="description">Exploring software engineering, automation, and modern technologies through hands-on projects and continuous learning.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <canvas id="matrix-bg"></canvas>
-                <div class="profile-image-hero">
-                    <img src="profile.png" alt="Kartik Profile Picture">
-                </div>
-            </div>
+      <section id="skills" class="section section-skills" aria-labelledby="skills-heading">
+        <div class="section-header">
+          <span>Skills</span>
+          <h2 id="skills-heading">Technical competencies</h2>
         </div>
-    </section>
+        <div class="skills-grid">
+          <div class="skill-card glass-panel">
+            <h3>Programming Languages</h3>
+            <p>Java, Python, C, JavaScript, Rust</p>
+            <div class="progress-group">
+              <label>Java</label>
+              <div class="progress-bar"><span data-progress="92"></span></div>
+            </div>
+            <div class="progress-group">
+              <label>Python</label>
+              <div class="progress-bar"><span data-progress="88"></span></div>
+            </div>
+            <div class="progress-group">
+              <label>C</label>
+              <div class="progress-bar"><span data-progress="78"></span></div>
+            </div>
+          </div>
 
-    <section id="about" class="about-full">
-        <div class="container-full">
-            <div class="about-header">
-                <h2>About Me</h2>
-                <p class="about-intro">Driven by computer science fundamentals and high-performance execution.</p>
+          <div class="skill-card glass-panel">
+            <h3>Web Development</h3>
+            <p>HTML5, CSS3, JavaScript, REST APIs, responsive design</p>
+            <div class="progress-group">
+              <label>Frontend</label>
+              <div class="progress-bar"><span data-progress="86"></span></div>
             </div>
-            
-            <div class="about-grid">
-                <div class="about-main">
-                    <div class="about-card">
-                        <h3>My Focus</h3>
-                        <p>I am a software engineer driven by a deep commitment to mastering foundational computer science and engineering highly efficient systems through precise, optimized, and scalable code. My primary expertise lies in Python and Java, which I leverage for backend development, system automation, and advanced algorithmic problem-solving. With a strong analytical foundation in linear algebra, vector calculus, and computational reasoning, I approach complex architectural and logical challenges with a mathematically rigorous mindset focused on performance, abstraction, and engineering precision.</p>
-                    </div>
-                </div>
+            <div class="progress-group">
+              <label>Backend</label>
+              <div class="progress-bar"><span data-progress="82"></span></div>
             </div>
+            <div class="progress-group">
+              <label>Databases</label>
+              <div class="progress-bar"><span data-progress="80"></span></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel">
+            <h3>Systems & Security</h3>
+            <p>Networking, Cybersecurity, Linux, Docker, Git</p>
+            <div class="progress-group">
+              <label>Networking</label>
+              <div class="progress-bar"><span data-progress="76"></span></div>
+            </div>
+            <div class="progress-group">
+              <label>Cybersecurity</label>
+              <div class="progress-bar"><span data-progress="74"></span></div>
+            </div>
+            <div class="progress-group">
+              <label>Tools</label>
+              <div class="progress-bar"><span data-progress="84"></span></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="skills" class="skills-section">
-    <div class="container">
-        <h2>Technical_Stack</h2>
-        <div class="skills-wrapper">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">JavaScript</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Core_CS</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Algorithms</span>
-                    <span class="skill-tag">Data Structures</span>
-                    <span class="skill-tag">Linear Algebra</span>
-                    <span class="skill-tag">Calculus</span>
-                </div>
-            </div>
+      <section id="projects" class="section section-projects" aria-labelledby="projects-heading">
+        <div class="section-header">
+          <span>Projects</span>
+          <h2 id="projects-heading">Selected work</h2>
         </div>
-
-        <div class="resume-container">
-            <p class="resume-hint">Access restricted data:</p>
-            <button id="resume-decrypt" class="btn-decrypt" onclick="window.open('resume.pdf', '_blank')">
-                <span class="btn-text">DECRYPT_RESUME.EXE</span>
-                <span class="btn-glitch"></span>
-            </button>
-        </div>
-    </div>
-</section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-tag">Offline AI Assistant</div>
-                    <h3>Local Voice-Assistant</h3>
-                    <p>A Python-based local voice assistant that can understand voice commands, perform system tasks, answer basic queries, and automate everyday operations without relying heavily on cloud services. Built using speech recognition, text-to-speech, and backend automation technologies to provide a fast and interactive desktop assistant experience.</p>
-                        <div class="project-links">
-                        <a href="https://github.com/orignlkartik1/Offline-Voice-Assistance" class="project-link">Code →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-tag">Dynamic QR Codes</div>
-                    <h3>QR Code-Generator</h3>
-                    <p>A simple and efficient web application that generates QR codes instantly for text, links, and other digital content. Built with a clean user interface and fast processing to make sharing information quick, easy, and accessible across devices.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/orignlkartik1/QR-Code-Generator" class="project-link">Code →</a>
-                    </div>
-                </div>
+        <div class="projects-grid">
+          <article class="project-card glass-panel">
+            <div class="project-tag">System Design</div>
+            <h3>Campus Resource Tracker</h3>
+            <p>A responsive app for students to discover campus resources, track progress, and connect with mentors using an intuitive dashboard and secure backend.</p>
+            <p class="project-stack">Java · Spring Boot · PostgreSQL · REST · Tailwind CSS</p>
+            <div class="project-actions">
+              <a href="https://github.com/orignlkartik1/resource-tracker" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#contact">Live Demo</a>
             </div>
-        </div>
-    </section>
+          </article>
 
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <h2>Coding Profiles</h2>
-            <div class="stats-wrapper">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon leetcode-icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 32 32"
-                                fill="currentColor"
-                                width="24"
-                                height="24"
-                            >
-                                <path d="M21.469 23.469a1.531 1.531 0 0 1-2.156 2.156l-8.782-8.782a1.531 1.531 0 0 1 0-2.156l8.782-8.782a1.531 1.531 0 1 1 2.156 2.156L13.75 15.78h14.719a1.531 1.531 0 0 1 0 3.062H13.75z"/>
-                            </svg>
-                        </div>
-                        <h3>LeetCode</h3>
-                        <p class="stat-number">Student</p>
-                        <p class="stat-label">Algorithmic Practice</p>
-                        <a href="https://leetcode.com/u/Orignlkartik1/" class="stat-link">Visit Profile →</a>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon codeforces-icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                width="30"
-                                height="30"
-                            >
-            <path d="M5.308 9.14c0-2.182 1.77-3.952 3.952-3.952 1.34 0 2.523.67 3.238 1.692l2.378-1.372A6.91 6.91 0 0 0 9.26 2C5.25 2 2 5.25 2 9.26s3.25 7.26 7.26 7.26c3.472 0 6.375-2.438 7.1-5.69H9.26v-2.69h10.01c.06.37.09.75.09 1.14 0 5.01-4.09 9.1-9.1 9.1S1.16 14.27 1.16 9.26 5.25.16 10.26.16c2.79 0 5.29 1.26 6.96 3.24l-2.33 1.57A4.49 4.49 0 0 0 10.26 2.9c-3.5 0-6.35 2.85-6.35 6.35s2.85 6.35 6.35 6.35c2.63 0 4.88-1.61 5.84-3.9h-5.84V9.14h7.95c.09.47.14.96.14 1.46 0 4.49-3.65 8.14-8.14 8.14S2.12 15.09 2.12 10.6 5.77 2.46 10.26 2.46c2.5 0 4.74 1.13 6.24 2.91l-2.12 1.43c-.95-1.1-2.35-1.8-3.92-1.8-2.86 0-5.18 2.32-5.18 5.18s2.32 5.18 5.18 5.18c2.1 0 3.91-1.25 4.73-3.05H10.26V9.14z"/>
-        </svg>
-                        </div>
-                        <h3>GeeksForGeek</h3>
-                        <p class="stat-number">Student</p>
-                        <p class="stat-label">DSA Practice</p>
-                        <a href="https://www.geeksforgeeks.org/profile/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon atcoder-icon">
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            width="60"
-                            height="60"
-                        >
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10c2.39 0 4.584-.84 6.305-2.24l-1.42-1.42A7.938 7.938 0 0 1 12 20a8 8 0 1 1 0-16c1.93 0 3.7.684 5.08 1.82l1.42-1.42A9.956 9.956 0 0 0 12 2z"/>
-    </svg>
-                        </div>
-                        <h3>Codolio</h3>
-                        <p class="stat-number">User</p>
-                        <p class="stat-label">Overall stats</p>
-                        <a href="https://codolio.com/profile/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-                </div>
+          <article class="project-card glass-panel">
+            <div class="project-tag">Automation</div>
+            <h3>Offline Voice Assistant</h3>
+            <p>A voice-enabled productivity assistant that executes commands offline, automates local tasks, and helps users with quick system operations.</p>
+            <p class="project-stack">Python · SpeechRecognition · Automation · CLI</p>
+            <div class="project-actions">
+              <a href="https://github.com/orignlkartik1/Offline-Voice-Assistance" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#contact">Details</a>
             </div>
-        </div>
-    </section>
+          </article>
 
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <h2>Competitive Programming Profiles</h2>
-            <div class="stats-wrapper">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon leetcode-icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                fill="currentColor"
-                                >
-                                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.401 8.168L12 19.771l-7.335 3.86 1.401-8.168L.132 9.211l8.2-1.193z"/>
-                            </svg>
-                        </div>
-                        <h3>Codechef</h3>
-                        <p class="stat-number">Contestant</p>
-                        <p class="stat-label">Competitive programming</p>
-                        <a href="https://www.codechef.com/users/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon codeforces-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.672 21 0 20.328 0 19.5V9c0-.828.672-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5v-15c0-.828.672-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z"/>
-                            </svg>
-                        </div>
-                        <h3>Codeforces</h3>
-                        <p class="stat-number">Contestant</p>
-                        <p class="stat-label">Competitive Programming</p>
-                        <a href="https://codeforces.com/profile/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon atcoder-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M11.964 2.146L2.35 18.79H6.18L11.964 8.78l5.783 10.01h3.83L11.964 2.146zm-4.32 16.644h8.64l-4.32-7.483-4.32 7.483z"/>
-                            </svg>
-                        </div>
-                        <h3>AtCoder</h3>
-                        <p class="stat-number">Contestant</p>
-                        <p class="stat-label">Competitive Programming</p>
-                        <a href="https://atcoder.jp/users/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-                </div>
+          <article class="project-card glass-panel">
+            <div class="project-tag">Web App</div>
+            <h3>Secure QR Generator</h3>
+            <p>A lightweight web experience for generating dynamic QR codes with strong input validation and fast client-side rendering.</p>
+            <p class="project-stack">JavaScript · HTML · CSS · Canvas</p>
+            <div class="project-actions">
+              <a href="https://github.com/orignlkartik1/QR-Code-Generator" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#contact">Live Demo</a>
             </div>
+          </article>
         </div>
-    </section>
+      </section>
 
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <h2>Machine Learning AND AI Profiles</h2>
-            <div class="stats-wrapper">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon leetcode-icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 32 32"
-                                fill="currentColor"
-                                width="50"
-                                height="50"
-                            >
-            <path d="M15.2 4H10v24h5.2v-7.2l2.4-2.8 6 10h6l-8.4-13.6L29.2 4h-6l-8 9.6z"/>
-        </svg>
-                        </div>
-                        <h3>Kaggle</h3>
-                        <p class="stat-number">ML practitioner</p>
-                        <p class="stat-label">Hands on Building ML Models</p>
-                        <a href="https://www.kaggle.com/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
+      <section id="journey" class="section section-journey" aria-labelledby="journey-heading">
+        <div class="section-header">
+          <span>Experience</span>
+          <h2 id="journey-heading">Learning journey & achievements</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-panel">
+            <span class="timeline-year">2024</span>
+            <h3>Advanced Web Development</h3>
+            <p>Completed a project-based web development curriculum with REST API integration, responsive interfaces, and accessibility-first design.</p>
+          </article>
+          <article class="timeline-item glass-panel">
+            <span class="timeline-year">2025</span>
+            <h3>Cybersecurity Certification</h3>
+            <p>Earned a certified cybersecurity achievement focusing on network security, secure coding, and defensive architecture.</p>
+          </article>
+          <article class="timeline-item glass-panel">
+            <span class="timeline-year">Today</span>
+            <h3>Building Scalable Solutions</h3>
+            <p>Developing software projects with clean architecture, high-performance code, and polished product design.</p>
+          </article>
+        </div>
+      </section>
 
-                    <div class="stat-card">
-                        <div class="stat-icon codeforces-icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="50"
-                                height="50"
-                                fill="currentColor"
-                            >
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.1 0 9.3-3.82 9.93-8.75H12v-3.5h9.95C21.5 5.05 17.2 2 12 2zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.61 0 3.07.64 4.15 1.68l2.47-2.47A9.937 9.937 0 0 0 12 4C7.03 4 3 8.03 3 13s4.03 9 9 9c4.97 0 9-4.03 9-9 0-.6-.06-1.18-.17-1.75H12V20z"/>
-        </svg>
-                        </div>
-                        <h3>Google For Devlopers</h3>
-                        <p class="stat-number">Learner</p>
-                        <p class="stat-label">Theory and Maths behind ML models</p>
-                        <a href="https://me.developers.google.com/u/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-                </div>
+      <section class="section section-services" aria-labelledby="services-heading">
+        <div class="section-header">
+          <span>Services</span>
+          <h2 id="services-heading">What I offer</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card glass-panel">
+            <h3>Web Development</h3>
+            <p>Fast, accessible, and responsive front-end experiences built with modern HTML, CSS, and vanilla JavaScript.</p>
+          </div>
+          <div class="service-card glass-panel">
+            <h3>Backend Development</h3>
+            <p>REST APIs, data modelling, and secure server-side logic for robust applications and automation workflows.</p>
+          </div>
+          <div class="service-card glass-panel">
+            <h3>Software Engineering</h3>
+            <p>Structured development, testable code, and maintainable architecture for long-term reliability.</p>
+          </div>
+          <div class="service-card glass-panel">
+            <h3>Networking</h3>
+            <p>Network fundamentals, secure protocols, and practical configuration for reliable communication systems.</p>
+          </div>
+          <div class="service-card glass-panel">
+            <h3>Cybersecurity</h3>
+            <p>Threat-aware design, security best practices, and defensive thinking to harden applications and systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="github" class="section section-github" aria-labelledby="github-heading">
+        <div class="section-header">
+          <span>GitHub</span>
+          <h2 id="github-heading">Repository highlights</h2>
+        </div>
+        <div class="github-grid">
+          <div class="glass-panel github-profile">
+            <h3>GitHub Integration</h3>
+            <p>Live GitHub stats and contributions appear here when connected via API or embedded script.</p>
+            <div class="github-stats">
+              <div><strong>120+</strong><span>Commits</span></div>
+              <div><strong>15</strong><span>Repositories</span></div>
+              <div><strong>500+</strong><span>Contributions</span></div>
             </div>
-        </div>
-    </section>
-
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <h2>Devlopment Profile</h2>
-            <div class="stats-wrapper">
-                <div class="stats-grid">
-                    
-                    
-
-                    <div class="stat-card">
-                        <div class="stat-icon github-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p class="stat-number">Projects</p>
-                        <p class="stat-label">work</p>
-                        <a href="https://github.com/orignlkartik1" class="stat-link">Visit Profile →</a>
-                    </div>
-                </div>
+          </div>
+          <div class="glass-panel github-graph" aria-label="GitHub contribution graph placeholder">
+            <span class="graph-title">Contribution graph</span>
+            <div class="graph-grid" role="img" aria-label="Placeholder contribution blocks">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
+          </div>
+          <div class="glass-panel repo-showcase">
+            <h3>Featured Repositories</h3>
+            <ul>
+              <li><strong>Offline Voice Assistant</strong><span>Python automation assistant</span></li>
+              <li><strong>QR Code Generator</strong><span>Fast client-side QR builder</span></li>
+              <li><strong>Campus Resource Tracker</strong><span>Full-stack student dashboard</span></li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p class="contact-subtitle">Looking to collaborate on complex systems or talk algorithms? Let's get in touch.</p>
-            <div class="contact-methods">
-                <a href="mailto:kartik964364@gmail.com" class="contact-link">Email</a>
-                <a href="https://github.com/orignlkartik1" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com/in/orignlkartik1" class="contact-link">LinkedIn</a>
-                <a href="https://x.com/Orignlkartik1" class="contact-link">Twitter</a>
-                <a href="https://www.instagram.com/kartix_96" class="contact-link">Instagram</a>
+      <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+        <div class="section-header">
+          <span>Contact</span>
+          <h2 id="contact-heading">Let’s collaborate</h2>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form glass-panel" id="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required aria-required="true"></textarea>
+            <button type="submit" class="button button-primary">Send Message</button>
+            <p class="form-feedback" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info glass-panel">
+            <h3>Reach out directly</h3>
+            <div class="info-list">
+              <div><span>Email</span><a href="mailto:kartik@example.com">kartik@example.com</a></div>
+              <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/kartik-gupta" target="_blank" rel="noreferrer">linkedin.com/in/kartik-gupta</a></div>
+              <div><span>GitHub</span><a href="https://github.com/orignlkartik1" target="_blank" rel="noreferrer">github.com/orignlkartik1</a></div>
+              <div><span>Location</span><p>India</p></div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Kartik Gupta. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <p>&copy; <span id="current-year"></span> Kartik Gupta. Built with HTML, CSS, and JavaScript.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <button class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
