@@ -105,21 +105,26 @@
         <div class="hero-visual">
             <div class="canvas-wrapper">
                 <canvas id="matrix-bg"></canvas>
+                
+                <div class="profile-image-hero" id="profile-card" title="Click to switch profile photo">
+                    <div class="profile-frame-corner top-left"></div>
+                    <div class="profile-frame-corner top-right"></div>
+                    <div class="profile-frame-corner bottom-left"></div>
+                    <div class="profile-frame-corner bottom-right"></div>
+                    <img src="profile (2).png" alt="Kartik Gupta Profile Picture" id="profile-img">
+                    <div class="profile-overlay-badge">
+                        <span class="status-pulse"></span>
+                        <span id="profile-badge-text">CYBER_CORE // ACTIVE</span>
+                    </div>
+                </div>
+
                 <div class="canvas-controls">
                     <button id="canvas-mode-toggle" class="canvas-btn" title="Switch visualizer mode">
                         <span id="mode-label">Mode: Neural Net</span>
                     </button>
-                </div>
-            </div>
-
-            <div class="profile-image-hero">
-                <div class="profile-frame-corner top-left"></div>
-                <div class="profile-frame-corner top-right"></div>
-                <div class="profile-frame-corner bottom-left"></div>
-                <div class="profile-frame-corner bottom-right"></div>
-                <img src="profile (2).png" alt="Kartik Gupta Profile Picture" id="profile-img">
-                <div class="profile-overlay-badge">
-                    <span>CYBER_CORE // ACTIVE</span>
+                    <button id="photo-switch-btn" class="canvas-btn" title="Switch photo">
+                        <span>Photo: 1/2</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -480,7 +485,7 @@
                 <span class="term-btn term-minimize" title="Minimize"></span>
                 <span class="term-btn term-maximize" title="Maximize"></span>
             </div>
-            <div class="terminal-title">kartik@cyber-core:~$ (CLI Terminal)</div>
+            <div class="terminal-title">orignlkartik1@cyber-core:~$ (CLI Terminal)</div>
             <div class="terminal-actions">
                 <button id="term-theme-toggle" class="term-action-btn" title="Toggle Terminal Color Theme">Color Theme</button>
                 <button id="term-clear-btn" class="term-action-btn" title="Clear Output">Clear</button>
@@ -488,22 +493,18 @@
         </div>
 
         <div class="terminal-body" id="terminal-body">
-            <pre class="terminal-ascii">
-   ___  ___ _____ _____ _   _ _   __   _   ___   _____ 
-  / _ \ | ___ \_   _/  ___| \ | | | / /  / | / _ \ |_   _|
- / /_\ \| |_/ / | | \ `--.|  \| | |/ /   | |/ /_\ \  | |  
- |  _  ||    /  | |  `--. \ . ` |    \   | ||  _  |  | |  
- | | | || |\ \ _| |_/\__/ / |\  | |\  \  | || | | | _| |_ 
- \_| |_/\_| \_|\___/\____/\_| \_/\_| \_/ \_/\_| |_/ \___/ 
-            </pre>
+            <div class="terminal-brand-header">
+                <div class="terminal-brand-title">&gt;_ ORIGNLKARTIK1</div>
+                <div class="terminal-brand-sub">// KARTIK GUPTA CYBER CORE ENGINE v2.5</div>
+            </div>
             <div class="terminal-welcome">
-                Welcome to <strong>Kartik's Interactive Cyber Terminal v2.5</strong>.<br>
+                Welcome to <strong>orignlkartik1 CLI Terminal</strong>.<br>
                 Type <span class="cmd-highlight">'help'</span> to see available commands or <span class="cmd-highlight">'sudo hire'</span> for a surprise!
             </div>
             <div id="terminal-output" class="terminal-output"></div>
 
             <form id="terminal-form" class="terminal-input-row" autocomplete="off">
-                <span class="terminal-prompt">kartik@cyber-core:~$</span>
+                <span class="terminal-prompt">orignlkartik1@cyber-core:~$</span>
                 <input type="text" id="terminal-input" class="terminal-input" autofocus aria-label="Terminal input command">
             </form>
         </div>
