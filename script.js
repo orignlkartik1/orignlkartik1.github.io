@@ -311,6 +311,34 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 
+    // Photo Switcher Logic (profile 2 vs profile 3)
+    const profileImg = document.getElementById('profile-img');
+    const profileCard = document.getElementById('profile-card');
+    const photoSwitchBtn = document.getElementById('photo-switch-btn');
+    let photoIndex = 2;
+
+    function togglePhoto() {
+        if (!profileImg) return;
+        photoIndex = photoIndex === 2 ? 3 : 2;
+        profileImg.style.opacity = '0.2';
+        setTimeout(() => {
+            profileImg.src = `profile (${photoIndex}).png`;
+            profileImg.style.opacity = '1';
+        }, 150);
+        if (photoSwitchBtn) {
+            photoSwitchBtn.querySelector('span').textContent = `Photo: ${photoIndex === 2 ? '1/2' : '2/2'}`;
+        }
+        showToast(`Avatar updated (Shot ${photoIndex === 2 ? '1' : '2'})`);
+    }
+
+    if (profileCard) profileCard.addEventListener('click', togglePhoto);
+    if (photoSwitchBtn) {
+        photoSwitchBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePhoto();
+        });
+    }
+
     // ----------------------------------------------------------------------
     // 6. Interactive CLI Terminal Drawer
     // ----------------------------------------------------------------------
@@ -392,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function processCommand(cmd) {
         const cleanCmd = cmd.trim().toLowerCase();
-        appendTerminalOutput(`kartik@cyber-core:~$ ${cmd}`, true);
+        appendTerminalOutput(`orignlkartik1@cyber-core:~$ ${cmd}`, true);
 
         if (cleanCmd === '') return;
 
