@@ -3,247 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Gupta | AI/ML Developer</title>
+    <title>Kartik Gupta | AI/ML & Software Engineer</title>
+    <meta name="description" content="Portfolio of Kartik Gupta - AI/ML Engineer, Computer Science Developer, and DSA Specialist skilled in Python, Java, C++, and Intelligent Systems.">
+    <meta name="keywords" content="Kartik Gupta, AI ML Developer, Software Engineer, Data Structures Algorithms, Python, Java, Machine Learning, Lead Outreach AI Agent">
+    <meta name="author" content="Kartik Gupta">
 
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kartik Gupta | AI/ML & Software Engineer">
+    <meta property="og:description" content="Explore AI/ML agents, offline voice assistants, and algorithmic engineering projects by Kartik Gupta.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+<!-- Background Ambient Canvas -->
+<div class="glow-bg"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="#" class="logo">ORIGNLKARTIK1.</a>
-        <ul class="nav-menu">
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#stats">Stats</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <a href="#profile" class="logo">
+            <span class="logo-prefix">&gt;_</span> ORIGNLKARTIK1<span class="logo-dot">.</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#profile" class="nav-link active">Profile</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#profiles" class="nav-link">Profiles</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+
+        <div class="nav-actions">
+            <button id="terminal-toggle-btn" class="cli-trigger-btn" aria-label="Open CLI Terminal" title="Press ~ or Ctrl+K">
+                <span class="cli-icon">&gt;_</span>
+                <span class="cli-text">CLI Terminal</span>
+            </button>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </div>
 </nav>
 
+<!-- Hero Section -->
 <section id="profile" class="hero">
     <div class="hero-content">
         <div class="hero-text">
-            <h1>Hey, I'm <span class="highlight">Kartik</span></h1>
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Available for AI/ML & Engineering Roles
+            </div>
 
-            <p class="tagline">
-                <span id="typewriter"></span><span class="cursor">|</span>
-            </p>
+            <h1>Hey, I'm <span class="highlight">Kartik Gupta</span></h1>
+
+            <div class="tagline-container">
+                <span class="prompt-symbol">&gt;</span>
+                <span id="typewriter"></span>
+                <span class="cursor">|</span>
+            </div>
 
             <p class="description">
-                AI/ML enthusiast focused on building intelligent systems, learning core machine learning concepts,
-                and strengthening Data Structures & Algorithms with Python, C++, and Java.
+                Computer Science Engineer focused on engineering <strong>intelligent AI agents</strong>, mastering machine learning algorithms under the hood, and solving high-scale problems with <strong>Python, C++, and Java</strong>.
             </p>
 
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <span class="stat-value">AI / ML</span>
+                    <span class="stat-desc">Core Specialization</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="stat-value">DSA</span>
+                    <span class="stat-desc">Algorithmic Practice</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-desc">Offline-First Arch</span>
+                </div>
+            </div>
+
             <div class="cta-buttons">
-                <a href="resume.pdf" class="btn btn-primary">Resume</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Resume
+                </a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <button id="hero-cli-btn" class="btn btn-tertiary">
+                    <span>&gt;_</span> Launch CLI
+                </button>
             </div>
         </div>
 
         <div class="hero-visual">
-            <canvas id="matrix-bg"></canvas>
+            <div class="canvas-wrapper">
+                <canvas id="matrix-bg"></canvas>
+                <div class="canvas-controls">
+                    <button id="canvas-mode-toggle" class="canvas-btn" title="Switch visualizer mode">
+                        <span id="mode-label">Mode: Neural Net</span>
+                    </button>
+                </div>
+            </div>
+
             <div class="profile-image-hero">
-                <img src="profile (2).png" alt="Kartik Profile Picture">
+                <div class="profile-frame-corner top-left"></div>
+                <div class="profile-frame-corner top-right"></div>
+                <div class="profile-frame-corner bottom-left"></div>
+                <div class="profile-frame-corner bottom-right"></div>
+                <img src="profile (2).png" alt="Kartik Gupta Profile Picture" id="profile-img">
+                <div class="profile-overlay-badge">
+                    <span>CYBER_CORE // ACTIVE</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="about-full">
-    <div class="container-full">
-
-        <div class="about-header">
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">// 01. KNOWLEDGE & PHILOSOPHY</span>
             <h2>About Me</h2>
-            <p class="about-intro">Focused on AI/ML, mathematics, and strong software engineering fundamentals.</p>
+            <p class="section-subtitle">Bridging mathematics, machine learning theoretical foundations, and production engineering.</p>
         </div>
 
         <div class="about-grid">
-
             <div class="about-main">
-
-                <div class="about-card">
-                    <h3>My Focus</h3>
+                <div class="about-card glass-panel">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>My Engineering Focus</h3>
                     <p>
-                        I am a Computer Science Engineering student focused on AI/ML development and strong
-                        programming fundamentals. I work primarily with Python, C++, and Java while building
-                        a strong understanding of machine learning, data analysis, and algorithms.
+                        I am a Computer Science Engineering student passionately building intelligent applications and AI/ML architectures. I combine rigorous analytical thinking with hands-on development in <strong>Python, C++, and Java</strong>.
                     </p>
-
                     <p>
-                        I also enjoy applying mathematics—especially linear algebra, probability, and calculus—
-                        to understand how machine learning models work under the hood.
+                        Rather than treating machine learning models as black boxes, I delve deeply into the underlying linear algebra, calculus, and probability theory to build optimized, explainable solutions from the ground up.
                     </p>
                 </div>
 
-                <div class="about-card">
-                    <h3>Learning Approach</h3>
+                <div class="about-card glass-panel">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Methodology & DSA Mastery</h3>
                     <p>
-                        I consistently practice Data Structures and Algorithms along with hands-on AI/ML projects.
-                        My goal is to become an industry-ready AI/ML engineer by building real-world projects
-                        and mastering core concepts step by step.
+                        I consistently practice Data Structures and Algorithms to cultivate high-performance code design, memory efficiency, and optimal time complexities across BFS/DFS graph traversals, dynamic programming, and tree structures.
                     </p>
-
                     <p>
-                        I focus on writing clean, optimized, and scalable code while improving my problem-solving skills.
+                        My mission is to build robust software systems—ranging from autonomous LLM agentic workflows to low-latency offline-first voice applications.
                     </p>
                 </div>
-
             </div>
 
             <div class="about-sidebar">
-
-                <div class="stats-box">
-                    <div class="stat">
-                        <h4>AI/ML</h4>
-                        <p>Primary Focus</p>
+                <div class="stats-box glass-panel">
+                    <div class="stat-item">
+                        <span class="stat-num">01</span>
+                        <div class="stat-text">
+                            <h4>AI & Agents</h4>
+                            <p>LLM Workflows & RAG</p>
+                        </div>
                     </div>
-
-                    <div class="stat">
-                        <h4>DSA</h4>
-                        <p>Daily Practice</p>
+                    <div class="stat-item">
+                        <span class="stat-num">02</span>
+                        <div class="stat-text">
+                            <h4>Core DSA</h4>
+                            <p>Daily Algorithmic Practice</p>
+                        </div>
                     </div>
-
-                    <div class="stat">
-                        <h4>CSE</h4>
-                        <p>Student</p>
-                    </div>
-                </div>
-
-                <div class="skills-section">
-                    <h4>Technical Skills</h4>
-                    <div class="skills-list">
-                        <div class="skill-tag">Python</div>
-                        <div class="skill-tag">C++</div>
-                        <div class="skill-tag">Java</div>
-                        <div class="skill-tag">Machine Learning</div>
-                        <div class="skill-tag">Data Analysis</div>
-                        <div class="skill-tag">Feature Engineering</div>
-                        <div class="skill-tag">Model Evaluation</div>
-                        <div class="skill-tag">DSA</div>
-                        <div class="skill-tag">OOP</div>
-                        <div class="skill-tag">Linear Algebra</div>
-                        <div class="skill-tag">Probability</div>
+                    <div class="stat-item">
+                        <span class="stat-num">03</span>
+                        <div class="stat-text">
+                            <h4>Systems</h4>
+                            <p>Backend & Automation</p>
+                        </div>
                     </div>
                 </div>
 
+                <div class="quote-box glass-panel">
+                    <div class="quote-symbol">“</div>
+                    <p class="quote-text">Engineering precision begins with a mathematically rigorous mindset and cleanest computational abstractions.</p>
+                </div>
             </div>
-
         </div>
     </div>
 </section>
 
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">// 02. TECHNICAL MATRIX</span>
+            <h2>Skills & Expertise</h2>
+            <p class="section-subtitle">Core tech stack grouped across engineering domains and algorithmic foundations.</p>
+        </div>
+
+        <div class="skills-grid">
+            <!-- AI & ML -->
+            <div class="skill-category-card glass-panel">
+                <div class="skill-category-header">
+                    <div class="category-icon ai-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                </div>
+                <p class="category-desc">Building intelligent systems, model evaluation, and LLM integrations.</p>
+                <div class="skills-tags-wrapper">
+                    <span class="skill-tag highlight-tag">Scikit-learn</span>
+                    <span class="skill-tag highlight-tag">TensorFlow & Keras</span>
+                    <span class="skill-tag">Pandas & NumPy</span>
+                    <span class="skill-tag">LLM & Prompt Eng</span>
+                    <span class="skill-tag">RAG Workflows</span>
+                    <span class="skill-tag">Supervised Learning</span>
+                    <span class="skill-tag">Feature Engineering</span>
+                    <span class="skill-tag">Neural Networks</span>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="skill-category-card glass-panel">
+                <div class="skill-category-header">
+                    <div class="category-icon lang-icon">⚡</div>
+                    <h3>Programming Languages</h3>
+                </div>
+                <p class="category-desc">High-performance languages for AI backend, algorithmic solving & web.</p>
+                <div class="skills-tags-wrapper">
+                    <span class="skill-tag highlight-tag">Python (Expert)</span>
+                    <span class="skill-tag highlight-tag">Java (Expert)</span>
+                    <span class="skill-tag">C++ (Proficient)</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Bash / Linux</span>
+                </div>
+            </div>
+
+            <!-- DSA & Math -->
+            <div class="skill-category-card glass-panel">
+                <div class="skill-category-header">
+                    <div class="category-icon dsa-icon">📐</div>
+                    <h3>DSA & Mathematics</h3>
+                </div>
+                <p class="category-desc">Computational reasoning and core algorithm optimization.</p>
+                <div class="skills-tags-wrapper">
+                    <span class="skill-tag highlight-tag">Dynamic Programming</span>
+                    <span class="skill-tag highlight-tag">Graph Algorithms</span>
+                    <span class="skill-tag">Trees & Heaps</span>
+                    <span class="skill-tag">Linear Algebra</span>
+                    <span class="skill-tag">Vector Calculus</span>
+                    <span class="skill-tag">Probability & Stats</span>
+                    <span class="skill-tag">System Design</span>
+                </div>
+            </div>
+
+            <!-- Backend & Tools -->
+            <div class="skill-category-card glass-panel">
+                <div class="skill-category-header">
+                    <div class="category-icon tool-icon">🛠️</div>
+                    <h3>Backend & Systems</h3>
+                </div>
+                <p class="category-desc">Version control, automation pipelines, and offline-first architectures.</p>
+                <div class="skills-tags-wrapper">
+                    <span class="skill-tag highlight-tag">Git & GitHub</span>
+                    <span class="skill-tag">API Automation</span>
+                    <span class="skill-tag">Offline-First Arch</span>
+                    <span class="skill-tag">Speech & NLP</span>
+                    <span class="skill-tag">Web Scraping</span>
+                    <span class="skill-tag">CI/CD GitHub Actions</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
 <section id="projects" class="projects">
     <div class="container">
-        <h2>Featured Projects</h2>
+        <div class="section-header">
+            <span class="section-tag">// 03. FEATURED WORK</span>
+            <h2>Projects</h2>
+            <p class="section-subtitle">Autonomous agents, privacy-first local tools, and algorithmic repositories.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ai">AI Agents & ML</button>
+            <button class="filter-btn" data-filter="local">Voice & Local LLM</button>
+            <button class="filter-btn" data-filter="dsa">DSA & Systems</button>
+        </div>
 
         <div class="projects-grid">
-
-            <div class="project-card">
-                <div class="project-tag">AI agent</div>
+            <!-- Project 1 -->
+            <div class="project-card glass-panel" data-category="ai">
+                <div class="project-header">
+                    <span class="project-tag">AI Agent / LLM Workflow</span>
+                    <span class="project-status">Featured</span>
+                </div>
                 <h3>Lead OutReach AI Agent</h3>
-                <p>An intelligent AI agent that automates lead generation, prospect qualification, personalized outreach, and follow-up management using LLMs, agentic workflows, and external business data APIs, helping businesses streamline customer acquisition and sales operations.
+                <p class="project-summary">
+                    An intelligent AI agent that automates lead generation, prospect qualification, personalized outreach, and follow-up management using LLMs, agentic workflows, and external business APIs.
                 </p>
+                <div class="project-tech-list">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">LLMs</span>
+                    <span class="tech-pill">Agentic Workflows</span>
+                    <span class="tech-pill">REST APIs</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/orignlkartik1/Lead-And-Outreach-AI-Agent" class="project-link">Code →</a>
+                    <a href="https://github.com/orignlkartik1/Lead-And-Outreach-AI-Agent" target="_blank" class="project-link">
+                        <span>Source Code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-tag">Local LLM</div>
+            <!-- Project 2 -->
+            <div class="project-card glass-panel" data-category="local">
+                <div class="project-header">
+                    <span class="project-tag">Local LLM / Privacy First</span>
+                    <span class="project-status">Active</span>
+                </div>
                 <h3>OffLine Voice Assistant</h3>
-                <p>
-                    Built a Local Voice Assistant that enables users to interact with their computer through voice commands, leveraging speech recognition, NLP, and text-to-speech technologies for seamless task automation and enhanced productivity.
+                <p class="project-summary">
+                    Built a Local Voice Assistant that enables users to interact with their computer through voice commands, leveraging speech recognition, NLP, and text-to-speech technologies for offline automation.
                 </p>
+                <div class="project-tech-list">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Speech NLP</span>
+                    <span class="tech-pill">Offline Speech</span>
+                    <span class="tech-pill">System Automation</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/orignlkartik1/" class="project-link">Code →</a>
+                    <a href="https://github.com/orignlkartik1/" target="_blank" class="project-link">
+                        <span>Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-panel" data-category="dsa">
+                <div class="project-header">
+                    <span class="project-tag">DSA / Competitive Programming</span>
+                    <span class="project-status">Ongoing</span>
+                </div>
+                <h3>Algorithmic Problem Solutions</h3>
+                <p class="project-summary">
+                    High-performance solution repository covering graph algorithms (Dijkstra, BFS/DFS), dynamic programming, tree traversals, and mathematical problem solving written in optimized C++ and Java.
+                </p>
+                <div class="project-tech-list">
+                    <span class="tech-pill">C++</span>
+                    <span class="tech-pill">Java</span>
+                    <span class="tech-pill">Algorithms</span>
+                    <span class="tech-pill">Data Structures</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://codolio.com/profile/orignlkartik1" target="_blank" class="project-link">
+                        <span>Codolio Profile</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="stats" class="stats-section">
+<!-- Profiles & Platforms Section (UNIFIED SINGLE SECTION FIXING DUPLICATE IDs) -->
+<section id="profiles" class="stats-section">
     <div class="container">
-        <h2>DSA Profile</h2>
+        <div class="section-header">
+            <span class="section-tag">// 04. PROFILES & PLATFORMS</span>
+            <h2>Coding & Developer Profiles</h2>
+            <p class="section-subtitle">Track my competitive programming journey, GitHub repositories, and AI/ML experiments.</p>
+        </div>
 
-        <div class="stats-wrapper">
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <h3>Codolio</h3>
-                    <p class="stat-number">Active Learner</p>
-                    <p class="stat-label">DSA Profile</p>
-                    <a href="https://codolio.com/profile/orignlkartik1" class="stat-link">Visit Profile →</a>
+        <div class="stats-grid">
+            <!-- Codolio Card -->
+            <div class="stat-card glass-panel">
+                <div class="platform-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
+                <h3>Codolio</h3>
+                <p class="stat-number">Active Solver</p>
+                <p class="stat-label">Unified DSA & Problem-Solving</p>
+                <a href="https://codolio.com/profile/orignlkartik1" target="_blank" class="stat-link">Visit Codolio Profile →</a>
+            </div>
 
+            <!-- GitHub Card -->
+            <div class="stat-card glass-panel">
+                <div class="platform-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </div>
+                <h3>GitHub</h3>
+                <p class="stat-number">orignlkartik1</p>
+                <p class="stat-label">Development & Open Source</p>
+                <a href="https://github.com/orignlkartik1" target="_blank" class="stat-link">Visit GitHub Profile →</a>
+            </div>
+
+            <!-- Kaggle Card -->
+            <div class="stat-card glass-panel">
+                <div class="platform-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+                <h3>Kaggle</h3>
+                <p class="stat-number">AI / ML</p>
+                <p class="stat-label">Datasets & Machine Learning</p>
+                <a href="https://www.kaggle.com/orignlkartik1" target="_blank" class="stat-link">Visit Kaggle Profile →</a>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="stat-card glass-panel">
+                <div class="platform-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <h3>LinkedIn</h3>
+                <p class="stat-number">Connect</p>
+                <p class="stat-label">Professional Network</p>
+                <a href="https://linkedin.com/in/orignlkartik1" target="_blank" class="stat-link">Connect on LinkedIn →</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="stats" class="stats-section">
-    <div class="container">
-        <h2>Development Profile</h2>
-
-        <div class="stats-wrapper">
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <h3>Github</h3>
-                    <p class="stat-number">Active Builder</p>
-                    <p class="stat-label">Development Profile</p>
-                    <a href="https://github.com/orignlkartik1" class="stat-link">Visit Profile →</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="stats" class="stats-section">
-    <div class="container">
-        <h2>AI/ML Profile</h2>
-
-        <div class="stats-wrapper">
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <h3>Kaggle</h3>
-                    <p class="stat-number">Active Learner</p>
-                    <p class="stat-label">AI/ML Profile</p>
-                    <a href="https://www.kaggle.com/orignlkartik1" class="stat-link">Visit Profile →</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="container">
-        <h2>Let's Connect</h2>
+        <div class="section-header center">
+            <span class="section-tag">// 05. TRANSMISSION</span>
+            <h2>Let's Connect</h2>
+            <p class="contact-subtitle">
+                Interested in AI/ML engineering, high-performance backend, or DSA collaboration? Reach out anytime.
+            </p>
+        </div>
 
-        <p class="contact-subtitle">
-            Interested in AI/ML, DSA discussions, or collaboration? Let’s connect.
-        </p>
+        <div class="contact-card glass-panel">
+            <div class="contact-email-box">
+                <span class="email-label">EMAIL ADDRESS:</span>
+                <span class="email-address" id="email-text">kartik964364@gmail.com</span>
+                <button id="copy-email-btn" class="copy-btn" title="Copy email address">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span id="copy-btn-text">Copy</span>
+                </button>
+            </div>
 
-        <div class="contact-methods">
-            <a href="mailto:kartik964364@gmail.com" class="contact-link">Email</a>
-            <a href="https://github.com/orignlkartik1" class="contact-link">GitHub</a>
-            <a href="https://linkedin.com/in/orignlkartik1" class="contact-link">LinkedIn</a>
+            <div class="contact-methods">
+                <a href="mailto:kartik964364@gmail.com" class="contact-link btn-primary">Send Email</a>
+                <a href="https://github.com/orignlkartik1" target="_blank" class="contact-link">GitHub</a>
+                <a href="https://linkedin.com/in/orignlkartik1" target="_blank" class="contact-link">LinkedIn</a>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
-    <p>&copy; 2026 Kartik Gupta. All rights reserved.</p>
+    <div class="container footer-content">
+        <p>&copy; 2026 Kartik Gupta. Engineered with Cyber Emerald AI aesthetic.</p>
+        <p class="terminal-hint">Tip: Press <kbd>`</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd> to launch the CLI terminal.</p>
+    </div>
 </footer>
+
+<!-- Interactive CLI Terminal Drawer / Modal -->
+<div id="terminal-modal" class="terminal-modal" role="dialog" aria-modal="true" aria-label="Interactive CLI Terminal">
+    <div class="terminal-overlay" id="terminal-overlay"></div>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="term-btn term-close" id="term-close-btn" title="Close"></span>
+                <span class="term-btn term-minimize" title="Minimize"></span>
+                <span class="term-btn term-maximize" title="Maximize"></span>
+            </div>
+            <div class="terminal-title">kartik@cyber-core:~$ (CLI Terminal)</div>
+            <div class="terminal-actions">
+                <button id="term-theme-toggle" class="term-action-btn" title="Toggle Terminal Color Theme">Color Theme</button>
+                <button id="term-clear-btn" class="term-action-btn" title="Clear Output">Clear</button>
+            </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+            <pre class="terminal-ascii">
+   ___  ___ _____ _____ _   _ _   __   _   ___   _____ 
+  / _ \ | ___ \_   _/  ___| \ | | | / /  / | / _ \ |_   _|
+ / /_\ \| |_/ / | | \ `--.|  \| | |/ /   | |/ /_\ \  | |  
+ |  _  ||    /  | |  `--. \ . ` |    \   | ||  _  |  | |  
+ | | | || |\ \ _| |_/\__/ / |\  | |\  \  | || | | | _| |_ 
+ \_| |_/\_| \_|\___/\____/\_| \_/\_| \_/ \_/\_| |_/ \___/ 
+            </pre>
+            <div class="terminal-welcome">
+                Welcome to <strong>Kartik's Interactive Cyber Terminal v2.5</strong>.<br>
+                Type <span class="cmd-highlight">'help'</span> to see available commands or <span class="cmd-highlight">'sudo hire'</span> for a surprise!
+            </div>
+            <div id="terminal-output" class="terminal-output"></div>
+
+            <form id="terminal-form" class="terminal-input-row" autocomplete="off">
+                <span class="terminal-prompt">kartik@cyber-core:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autofocus aria-label="Terminal input command">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toast" class="toast">Email copied to clipboard!</div>
 
 <script src="script.js"></script>
 
