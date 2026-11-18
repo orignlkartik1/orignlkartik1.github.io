@@ -60,10 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Typewriter Effect
     // ----------------------------------------------------------------------
     const textArray = [
-        "AI/ML Engineer", 
-        "DSA & Algorithm Specialist", 
-        "Backend Systems Developer", 
-        "Computer Science Scholar"
+        "Python Backend Developer",
+        "AI Engineer",
+        "FastAPI & REST API Developer"
     ];
     let textIndex = 0, charIndex = 0;
     const typewriterElement = document.getElementById("typewriter");
